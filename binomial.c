@@ -35,6 +35,14 @@ rootList rootCalculator(float a, float b, float c)
 {
     rootList r;
     float discriminant = b*b - 4*a*c;
+    if(a == 0)
+    {
+        r.length = -1;
+        // AN ERROR OCCURRED
+        // this is not a binomial equation
+        // if a == 0
+        return r;
+    }
     if(discriminant < 0)
     {
         r.length = 0;
